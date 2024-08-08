@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Joti One"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="parent-container">
+      <div class="game-container">
+        <div class="title">
+          <h1>Rock Paper Scissor</h1>
+        </div>
+        <div class="picker">
+          <h5>choose</h5>
+          <div id="scissor">
+            <button id="scissorBtn" onclick="playerPick('scissor')">
+              <img src="scissor.png" alt="scissor" />
+            </button>
+          </div>
+          <div id="paper">
+            <button id="paperBtn" onclick="playerPick('paper')">
+              <img src="paper.png" alt="paper" />
+            </button>
+          </div>
+          <div id="rock">
+            <button id="rockBtn" onclick="playerPick('rock')">
+              <img src="rock.png" alt="rock" />
+            </button>
+          </div>
+        </div>
+        <div class="main">
+          <div class="battle">
+            <div class="player-choice"></div>
+
+            <div class="computer-choice">
+              <div id="loadingAnimation" class="loading"></div>
+              <img id="computerImg" class="hidden" src="" alt="choice img" />
+            </div>
+          </div>
+          <h3 id="result"></h3>
+        </div>
+        <div class="refresh-button">
+          <button id="refreshBtn">
+            <img src="refresh.png" alt="refresh button" />
+          </button>
+          <h4>reset</h4>
+        </div>
+        <div class="play-button">
+          <button id="playAgainBtn" onclick="resetGame()" class="hidden">
+            <img src="play-button.png" alt="play button" />
+            <h2 style="font-family: 'Joti One'" ;>Next Round</h2>
+          </button>
+          <h3 id="winner" class="hidden"></h3>
+        </div>
+        <div class="player">
+          <h3>Player</h3>
+          <div class="scoring-container">
+            <div class="player-point"></div>
+            <div class="player-point"></div>
+            <div class="player-point"></div>
+          </div>
+        </div>
+        <div class="computer">
+          <h3>Computer</h3>
+          <div class="scoring-container">
+            <div class="computer-point"></div>
+            <div class="computer-point"></div>
+            <div class="computer-point"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

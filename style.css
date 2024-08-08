@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1e4e4;
+  font-family: "Joti One";
+  font-size: 22px;
+}
+
+button {
+  padding: 5px;
+}
+
+img {
+  width: 50px;
+}
+
+.parent-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  width: 50%;
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "picker main main main"
+    "picker main main main"
+    "picker main main main"
+    "refresh play play play"
+    "player player computer computer ";
+
+  gap: 10px;
+}
+
+.game-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.title {
+  grid-area: header;
+}
+
+.picker {
+  display: flex;
+  flex-direction: column;
+  grid-area: picker;
+}
+
+.main {
+  grid-area: main;
+  align-content: center;
+}
+
+.refresh-button {
+  grid-area: refresh;
+}
+
+.battle {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.battle img {
+  width: 100px;
+}
+
+.play-button {
+  grid-area: play;
+}
+
+.player {
+  grid-area: player;
+}
+
+.scoring-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.player-point {
+  background-color: #f1e4e4;
+  padding: 20px;
+  border-radius: 50%;
+  transition: background-color 0.5s;
+}
+
+.computer {
+  grid-area: computer;
+}
+
+.computer-point {
+  background-color: #f1e4e4;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.title {
+  background-color: #ff5252;
+}
+
+.picker {
+  background-color: #7e69ff;
+}
+
+.main {
+  background: conic-gradient(from 225deg, #7e69ff 0% 50%, #ff5252 50% 100%);
+}
+
+.play-button {
+  background-color: #7e69ff;
+}
+
+.refresh-button {
+  background-color: #ff5252;
+}
+
+#refreshBtn {
+  background-color: transparent;
+  border: none;
+}
+
+#playAgainBtn {
+  background-color: transparent;
+  border: none;
+}
+
+#playAgainBtn img {
+  width: 70px;
+  height: 70px;
+}
+
+.player {
+  background-color: #7e69ff;
+}
+
+.computer {
+  background-color: #ff5252;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: 80px;
+  animation: spin 2s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
